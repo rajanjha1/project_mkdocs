@@ -12,11 +12,12 @@ RUN \
     pip install mkdocs
 
 RUN mkdir -p /mkdocs
-COPY mkdockerize.sh /mkdocs
+#COPY mkdockerize.sh /mkdocs
+RUN ln -s /project_mkdocs /mkdocs
 WORKDIR /mkdocs
 
 EXPOSE 8000
 
 ENTRYPOINT ["./mkdockerize.sh"]
 
-CMD ["serve", "--dev-addr=0.0.0.0:8000"]
+CMD ["serve", "--dev-addr=::0:8000"]

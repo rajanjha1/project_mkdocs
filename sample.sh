@@ -2,7 +2,7 @@
 
 usage=" usage : Script to first produce and later serve a website......"
 
-if [[ "$1" = "" ]];
+if [[ "$1" = " " ]];
 then
   printf "Hi there !! What do you want to do today?\n" >&2
   printf "$usage\n" >&2

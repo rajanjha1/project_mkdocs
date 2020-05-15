@@ -1,6 +1,6 @@
 #!/bin/bash
 
-usage=" usage : Script to first produce and later serve a website......"
+usage="usage : Script to first produce and later serve a website......"
 
 if [[ "$1" = "" ]];
 then
@@ -9,7 +9,7 @@ then
   exit 1
 fi
 if [[ "$#" -ne "1" ]]
-then echo " Expecting only one argument here either produce or serve........";
+then echo " Expecting one argument here either produce or serve........";
 exit 1
 fi
 if [[ "$1" != "produce" && "$1" != "serve" ]];
@@ -49,7 +49,7 @@ if [[ -f "$DIR.tar.gz" ]];
 then
 printf "website was produced successfully.....\nNow you are ready to serve the website.......\n"
 printf "serving the website.....\n"
-tar -xf $DIR.tar.gz && cd $DIR && mkdocs serve
+tar -xf $DIR.tar.gz && cd $DIR && mkdocs serve --dev-addr=0.0.0.0:8000
 cd ..
 else
 printf "project directory is missing.....\nplease produce the website first.....\n"
