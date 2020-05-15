@@ -51,6 +51,7 @@ printf "website was produced successfully.....\nNow you are ready to serve the w
 printf "serving the website.....\n"
 tar -xf $DIR.tar.gz && cd $DIR && mkdocs serve --dev-addr=0.0.0.0:8000
 cd ..
+rm -rf $DIR*
 else
 printf "project directory is missing.....\nplease produce the website first.....\n"
 exit
