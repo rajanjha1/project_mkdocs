@@ -12,8 +12,7 @@ RUN \
     pip install mkdocs
 
 RUN mkdir -p /mkdocs
-COPY test_project1/ /mkdocs
-ADD mkdockerize.sh /mkdocs
+COPY mkdockerize.sh /mkdocs
 WORKDIR /mkdocs
 
 EXPOSE 8000
