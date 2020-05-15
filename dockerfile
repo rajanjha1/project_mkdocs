@@ -12,10 +12,9 @@ RUN \
     pip install mkdocs
 
 RUN mkdir -p /mkdocs
-RUN ln -s /project_mkdocs /mkdocs
+#RUN ln -s /project_mkdocs /mkdocs
 WORKDIR /mkdocs
 
-EXPOSE 8000
 
 ENTRYPOINT ["./mkdockerize.sh"]
 
