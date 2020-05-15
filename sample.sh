@@ -49,7 +49,7 @@ if [[ -f "$DIR.tar.gz" ]];
 then
 printf "website was produced successfully.....\nNow you are ready to serve the website.......\n"
 printf "serving the website.....\n"
-tar -xf $DIR.tar.gz && cd $DIR && mkdocs serve
+tar -xf $DIR.tar.gz && cd $DIR && mkdocs serve --dev-addr=0.0.0.0:8000
 cd ..
 else
 printf "project directory is missing.....\nplease produce the website first.....\n"
